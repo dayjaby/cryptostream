@@ -57,7 +57,6 @@ class CryptoStream:
         self.prefix += r.enc_session_key + r.enc_session_iv
 
     def encrypt(self, data):
-        print(len(data))
         for r in self.recipients:
             data = r.encrypt(data)
 
